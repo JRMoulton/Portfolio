@@ -1,0 +1,21 @@
+body {
+    margin: 0px;
+    padding: 0px;
+}
+
+.container {
+    display: grid;
+    grid-template-rows: repeat(3, 1fr 2fr);
+    grid-template-columns: 1fr; 
+}
+
+.container > :nth-child(odd) {
+    background-color: grey;
+}
+
+.container > p {
+    background-color: red;
+    display: grid;
+    justify-content: center;
+    border: 1px solid;
+}
