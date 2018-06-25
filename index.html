@@ -7,24 +7,41 @@
     <title>My Portfolio</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="portfolio.css" />
-    <script src="portfolio.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt"
+        crossorigin="anonymous">
 </head>
 
 <body>
-    <div class="container">
-        <p>This is cool</p>
-        <p>This is cool</p>
-        <p>This is cool</p>
-        <p>This is cool</p>
-        <p>This is cool</p>
-        <p>This is cool</p>
-        <p>This is cool</p>
-        <p>This is cool</p>
-        <p>This is cool</p>
-        <p>This is cool</p>
-        <p>This is cool</p>
-        <p>This is cool</p>
+    <div id="first">
+        <p id="name">Jared Moulton.</p>
+        <p id="welcome">Welcome to my portfolio</p>
+    </div>
+    <div id="main-projects">
+        <div>
+            <div class="media button-overlay">
+                <i class="far fa-play-circle"></i>
+                <video height="80%" autoplay muted loop>
+                    <source src="videos/birthday-problem2.mp4" type="video/mp4">
+                </video>
+            </div>
+            <p class="text">AOI Logic: The Birthday Problem</p>
+            <i class="fas fa-angle-down"></i>
+        </div>
+        <div>
+            <p class="text">Project #2</p>
+            <i class="fas fa-angle-down"></i>
+        </div>
+        <div>
+            <p class="text">Project #3</p>
+            <i class="fas fa-angle-down"></i>
+        </div>
+    </div>
+    <div id="sub-projects">
+
     </div>
 </body>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script src="portfolio.js"></script>
 
 </html>
