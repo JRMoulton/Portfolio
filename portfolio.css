@@ -66,3 +66,19 @@
     color: red;
     font-size: 180%;
 }
+
+.toggle-content {
+	display: none;
+	height: 0;
+	overflow: hidden;
+	transition: height 350ms ease-in-out;
+}
+
+.toggle-content.is-visible {
+	display: block;
+	height: auto;
+}
+a {
+    text-decoration: none;
+    color: rgb(230, 230, 230);
+}
