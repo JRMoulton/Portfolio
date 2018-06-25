@@ -62,6 +62,7 @@
     margin-bottom: 10px;
 }
 
-.button-overlay {
-    height: 30em;
+.fa-play-circle {
+    color: red;
+    font-size: 180%;
 }
