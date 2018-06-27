@@ -33,10 +33,19 @@
     grid-template-rows: 5fr 1fr;
 }
 .even-drop, .odd-drop {
+    display: grid;
     color: rgb(230, 230, 230);
+    grid-template-columns: repeat(10, 1fr);
+    row-gap: 60px;
 }
+.even-drop > .fa-angle-up {
+    grid-column: 1/11;
+}
+.odd-drop > .fa-angle-up {
+    grid-column: 1/11;
+} 
 
-.even {
+    .even {
     background-color: rgb(25, 25, 25);   
     grid-template-areas:
     "text media"
@@ -44,8 +53,6 @@
 }
 .even-drop {
     background-color: rgb(25, 25, 25);   
-    display: grid;
-    grid-template-columns: 1fr 1fr;
     align-items: center;
     justify-items: center;
 }
@@ -58,10 +65,15 @@
 }
 .odd-drop {
     background-color: rgb(45, 45, 45);   
-    display: grid;
-    grid-template-columns: 1fr 1fr;
     align-items: center;
     justify-items: center;
+}
+
+.media-drop {
+    grid-column: 7/10;
+}
+.text-drop {
+    grid-column: 2/5;
 }
 
 .media {
