@@ -1,5 +1,8 @@
 $(document).ready(function () {
     $("#first").css("height", ($(window).height()).toString() + "px")
+    document.querySelectorAll(".fa-angle-up").forEach(element => {
+        element.style.display = "none";
+    });
 });
 
 $(".fa-play-circle").click(function () {
@@ -16,8 +19,8 @@ var show = function (elem) {
 
     // Get the natural height of the element
     var getHeight = function () {
-        elem.style.display = 'block'; // Make it visible
-        var height = elem.scrollHeight + 'px'; // Get it's height
+        elem.style.display = 'grid'; // Make it visible
+        var height = (elem.scrollHeight) + 'px'; // Get it's height
         elem.style.display = ''; //  Hide it again
         return height;
     };
@@ -30,6 +33,8 @@ var show = function (elem) {
     window.setTimeout(function () {
         elem.style.height = '';
     }, 350);
+
+    elem.style.display = 'grid'; // Make it visible
 
 };
 
@@ -67,10 +72,25 @@ var toggle = function (elem, timing) {
 
 };
 
+function toggleButton(id) {
+    document.querySelectorAll("#" + id.toString()).forEach(tag => {
+        if (tag.style.display == "none") {
+            if (!tag.classList.contains("fa-angle-down")) {
+                tag.style.display = "inline";
+            } else {
+                window.setTimeout(function () {
+                    tag.style.display = "inline";
+                }, 250);
+            }
+        } else {
+            tag.style.display = "none";
+        }
+    });
+}
+
 // Listen for click events
 document.addEventListener('click', function (event) {
 
-    console.log(event);
     // Make sure clicked element is our toggle
     if (!event.target.classList.contains('toggle')) return;
 
@@ -80,9 +100,9 @@ document.addEventListener('click', function (event) {
     // Get the content
     var content = document.querySelector(event.target.hash);
     if (!content) return;
-    console.log(content);
 
     // Toggle the content
+    toggleButton(event.srcElement.id);
     toggle(content);
 
 }, false);
