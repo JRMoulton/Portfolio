@@ -69,11 +69,17 @@
     justify-items: center;
 }
 
-.media-drop {
+.media-drop-right {
     grid-column: 7/10;
 }
-.text-drop {
+.text-drop-left {
     grid-column: 2/5;
+}
+.media-drop-left {
+    grid-column: 2/5;
+}
+.text-drop-right {
+    grid-column: 7/10;
 }
 
 .media {
